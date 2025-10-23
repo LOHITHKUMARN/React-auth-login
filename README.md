@@ -71,8 +71,8 @@ Before running the app, make sure you have installed:
 
 ### 1. Clone the Repository
 `` bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name         
+git clone https://github.com//https://github.com/LOHITHKUMARN/React-auth-login/tree/main.git
+cd https://github.com/LOHITHKUMARN/React-auth-login/tree/main         
 
 ### 2. Setup the Backend
 
