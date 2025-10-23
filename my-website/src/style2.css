@@ -1,0 +1,234 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ===== Base Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    min-height: 100%;
+    overflow-y: auto;
+}
+
+/* ===== Navbar Modern Styling (Merged) ===== */
+.navbar {
+    background: linear-gradient(to right, #1e293b, #0f172a);
+    color: #ffffff;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #38bdf8;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: #f1f5f9;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #38bdf8;
+    color: #0f172a;
+    border-color: #38bdf8;
+}
+
+/* Buttons - used globally */
+.button {
+    padding: 10px 20px;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: #0369a1;
+}
+
+.button.secondary {
+    background-color: transparent;
+    border: 1px solid #0ea5e9;
+    color: #0ea5e9;
+}
+
+.button.secondary:hover {
+    background-color: #e0f2fe;
+}
+
+/* ===== Main Page Layout ===== */
+.page,
+.about-page,
+.services-page {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+/* ===== Services Page Styling ===== */
+.services-page {
+    background: linear-gradient(to bottom right, #e0f7fa, #fce4ec);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    animation: fadeInPage 0.6s ease;
+}
+
+/* Title and description */
+.services-page h1 {
+    font-size: 2.7rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.services-page p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #5c6b73;
+    margin-bottom: 40px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+}
+
+/* Individual service card */
+.service-card {
+    padding: 30px 25px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    border-color: #38bdf8;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 12px;
+    user-select: none;
+}
+
+.service-card p {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ===== Animations ===== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.delay {
+    animation-delay: 0.3s;
+}
+
+.delay2 {
+    animation-delay: 0.6s;
+}
+
+.delay3 {
+    animation-delay: 0.9s;
+}
+
+.delay4 {
+    animation-delay: 1.2s;
+}
+
+.delay5 {
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Responsive Tweaks ===== */
+@media (max-width: 480px) {
+    .services-page {
+        padding: 40px 20px;
+    }
+
+    .services-page h1 {
+        font-size: 2.2rem;
+    }
+
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
